@@ -1,3 +1,17 @@
+# SSH without password.
+
+    cd ~
+    ssh-keygen -t rsa
+    ssh root@jurist-rus.ru mkdir -p .ssh
+    cat .ssh/id_rsa.pub | ssh root@jurist-rus.ru 'cat >> .ssh/authorized_keys'
+    ls ~
+
+Issue the command `ls ~/.ssh` and study contained files.
+
+    ~/.ssh/id_rsa
+    ~/.ssh/id_rsa.pub
+    ~/.ssh/known_hosts
+
 
 # MENUFORYOU
 
