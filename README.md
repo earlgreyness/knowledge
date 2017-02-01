@@ -32,14 +32,16 @@ The first time pushing that branch:
 
 # Django
 
-This is equivalent to GROUP BY in raw SQL.
+This is equivalent to `GROUP BY` in raw SQL.
 
-    AggregatedOrders.objects
-                    .filter(date__in=dates, restaurant_id=restaurant_id)
-                    .values('date')
-                    .annotate(count=Sum(F('count_total') - F('count_deleted')))
-                    .order_by('count')
+```python
+AggregatedOrders.objects
+                .filter(date__in=dates, restaurant_id=restaurant_id)
+                .values('date')
+                .annotate(count=Sum(F('count_total') - F('count_deleted')))
+                .order_by('count')
+```
 
 # Tools
 
-Genymotion (https://www.genimotion.com) for testing Android on desktop.
+* Genymotion (https://www.genimotion.com) for testing Android on desktop.
