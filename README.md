@@ -1,5 +1,5 @@
 
-
+# MENUFORYOU
 
     ssh m4u@taun.menuforyou.ru
 
@@ -8,19 +8,20 @@
 
 MySQL Databases on `moff.menuforyou.ru`:
 
-    information_schema
-    data_collector
-    django
-    m4u_customer_area
-    m4ubilling
-    rmsmanage
+* `data_collector`
+* `django`
+* `m4u_customer_area`
+* `m4ubilling`
+* `rmsmanage`
 
 
-MySQL Database management software:
-    https://www.adminer.org
+
+# MySQL
+
+MySQL Database management software: https://www.adminer.org.
 
 
-# Working with git
+# Git
 
 Create new branch and switch to it immediately:
 
@@ -28,7 +29,7 @@ Create new branch and switch to it immediately:
 
 The first time pushing that branch:
 
-    git push -u origin BRANCH_NAME
+    git push [-u|--set-upstream] origin BRANCH_NAME
 
 # Django
 
@@ -45,3 +46,9 @@ AggregatedOrders.objects
 # Tools
 
 * Genymotion (https://www.genimotion.com) for testing Android on desktop.
+
+Genymotion requires Oracle VirtualBox (https://www.virtualbox.org/wiki/Linux_Downloads)
+
+After that we can run `*.apk` files on it -- like Apps from Google Market
+
+My account on genimotion: `earlgreyness`.
