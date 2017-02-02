@@ -1,21 +1,3 @@
-
-# MENUFORYOU
-
-    ssh m4u@taun.menuforyou.ru
-
-    ssh kirill@moff.menuforyou.ru
-
-
-MySQL Databases on `moff.menuforyou.ru`:
-
-* `data_collector`
-* `django`
-* `m4u_customer_area`
-* `m4ubilling`
-* `rmsmanage`
-
-
-
 # MySQL
 
 MySQL Database management software: https://www.adminer.org.
@@ -30,6 +12,10 @@ Create new branch and switch to it immediately:
 The first time pushing that branch:
 
     git push [-u|--set-upstream] origin BRANCH_NAME
+
+Resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.
+
+    git reset --hard HEAD
 
 # Django
 
