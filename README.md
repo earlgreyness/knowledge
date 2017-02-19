@@ -3,7 +3,7 @@
     cd ~
     ssh-keygen -t rsa
     ssh root@jurist-rus.ru mkdir -p .ssh
-    cat .ssh/id_rsa.pub | ssh root@jurist-rus.ru 'cat >> .ssh/authorized_keys'
+    cat ~/.ssh/id_rsa.pub | ssh root@jurist-rus.ru 'cat >> .ssh/authorized_keys'
     ls ~
 
 Issue the command `ls ~/.ssh` and study contained files.
@@ -13,26 +13,50 @@ Issue the command `ls ~/.ssh` and study contained files.
     ~/.ssh/known_hosts
 
 
-# MENUFORYOU
-
-    ssh m4u@taun.menuforyou.ru
-
-    ssh kirill@moff.menuforyou.ru
-
-
-MySQL Databases on `moff.menuforyou.ru`:
-
-* `data_collector`
-* `django`
-* `m4u_customer_area`
-* `m4ubilling`
-* `rmsmanage`
-
-
-
 # MySQL
 
 MySQL Database management software: https://www.adminer.org.
+
+
+# PostgreSQL
+
+Setup:
+
+    sudo apt-get install postgresql
+    sudo apt-get install postgresql-contrib
+    sudo apt-get install libpq-dev
+    sudo pip3 install psycopg2
+
+Commands:
+
+    CREATE USER "speaker" WITH PASSWORD 'the_password';
+    CREATE DATABASE "speaker-db" WITH encoding='utf8'
+                                      template="template0"
+                                      LC_COLLATE='ru_RU.UTF-8'
+                                      LC_CTYPE='ru_RU.UTF-8';
+    GRANT ALL PRIVILEGES ON DATABASE "speaker-db" to "speaker";
+
+Enter the shell:
+
+    sudo -i -u postgres
+    psql
+    \l
+    \d
+    \c database_name
+
+Create file `/etc/postgresql/9.3/main/environment` with this content:
+
+    PGCLIENTENCODING=utf8
+
+Configure `/etc/postgresql/9.3/main/postgres.conf`:
+
+    max_connections = 1000
+    ssl = false
+    client_encoding = utf8
+
+Home directory for automatically created `postgres` UNIX-user:
+
+    /var/lib/postgresql
 
 
 # Git
@@ -66,3 +90,10 @@ Genymotion requires Oracle VirtualBox (https://www.virtualbox.org/wiki/Linux_Dow
 After that we can run `*.apk` files on it -- like Apps from Google Market
 
 My account on genimotion: `earlgreyness`.
+
+# Linux
+
+RAM usage in Ubuntu:
+
+    free -m
+
