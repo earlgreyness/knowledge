@@ -69,6 +69,10 @@ The first time pushing that branch:
 
     git push [-u|--set-upstream] origin BRANCH_NAME
 
+Resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.
+
+    git reset --hard HEAD
+
 # Django
 
 This is equivalent to `GROUP BY` in raw SQL.
