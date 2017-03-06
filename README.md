@@ -45,6 +45,15 @@ Issue the command `ls ~/.ssh` and study contained files.
 
 # MySQL
 
+## Creating database and user
+
+    CREATE USER 'sa'@'localhost' IDENTIFIED BY 'password';
+    CREATE DATABASE sa_blog
+      DEFAULT CHARACTER SET utf8mb4
+      DEFAULT COLLATE utf8mb4_unicode_ci;
+    GRANT ALL ON sa_blog.* TO 'sa'@'localhost';
+    FLUSH PRIVILEGES;
+
 MySQL Database management software: https://www.adminer.org.
 
 
