@@ -54,7 +54,14 @@ Issue the command `ls ~/.ssh` and study contained files.
     GRANT ALL ON sa_blog.* TO 'sa'@'localhost';
     FLUSH PRIVILEGES;
 
+## Dumps
+
+    mysqldump -u username -ppassword --comments --add-drop-table sa_blog > dump.sql
+
+## Other
+
 MySQL Database management software: https://www.adminer.org.
+
 
 
 # PostgreSQL
