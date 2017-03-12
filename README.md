@@ -54,6 +54,14 @@ Issue the command `ls ~/.ssh` and study contained files.
     GRANT ALL ON sa_blog.* TO 'sa'@'localhost';
     FLUSH PRIVILEGES;
 
+## wp-config.php
+
+    /** Кодировка базы данных для создания таблиц. */
+    define('DB_CHARSET', 'utf8mb4');
+
+    /** Схема сопоставления. Не меняйте, если не уверены. */
+    define('DB_COLLATE', 'utf8mb4_unicode_ci');
+
 ## Dumps
 
     mysqldump -u username -ppassword --comments --add-drop-table sa_blog > dump.sql
