@@ -1,3 +1,10 @@
+# SSH tunnel
+
+This command proxies socket `10.2.0.5:5411` as if we are actually on `m4u@10.10.0.105`.
+The socket will be available at `localhost:9999`.
+
+    ssh -nNT -L 9999:10.2.0.5:5411 m4u@10.10.0.105
+
 # Ubuntu 14.04 uses Upstart
 
 Services are located at
