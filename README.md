@@ -136,6 +136,15 @@ Home directory for automatically created `postgres` UNIX-user:
 
 # Git
 
+## Merging
+
+Merge branch B into branch A.
+
+    git checkout A
+    git merge B
+
+## Bacics
+
 Create new branch and switch to it immediately:
 
     git checkout -b BRANCH_NAME
