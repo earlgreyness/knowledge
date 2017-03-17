@@ -1,3 +1,15 @@
+# Open folder in Sublime Text 3
+
+Open `~/.bashrc` in your favorite text editor.
+
+    [nano|gedit|mcedit|subl] ~/.bashrc
+
+Add the following line somewhere (for instance, in aliases section).
+
+    alias subl3='subl -n -a .'
+
+Now you can open current directory in Sublime just by entering the command `subl3` in terminal.
+
 # SSH tunnel
 
 This command proxies socket `10.2.0.5:5411` as if we are actually on `m4u@10.10.0.105`.
