@@ -10,7 +10,15 @@ Add the following line somewhere (for instance, in aliases section).
 
 Now you can open current directory in Sublime just by entering the command `subl3` in terminal.
 
-# SSH tunnel
+# SSH
+
+## Copy key
+
+This command effectively copies `~/.ssh/id_rsa.pub` to remote `.ssh/authorized_keys`.
+
+    ssh-copy-id m4u@10.10.0.105
+
+## SSH tunnel
 
 This command proxies socket `10.2.0.5:5411` as if we are actually on `m4u@10.10.0.105`.
 The socket will be available at `localhost:9999`.
