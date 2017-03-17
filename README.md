@@ -20,9 +20,11 @@ The socket will be available at `localhost:9999`.
 # Ubuntu 14.04 uses Upstart
 
 Services are located at
+
     /etc/init/*.conf
 
 They are triggered by
+
     sudo service php5-fpm [status|start|restart|stop]
 
 # Ubuntu 16.04 uses systemd
