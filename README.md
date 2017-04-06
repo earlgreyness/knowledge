@@ -122,7 +122,8 @@ Commands:
 Enter the shell:
 
     sudo -i -u postgres
-    psql
+    export LC_ALL=ru_RU.UTF-8
+    psql [database_name]
     \l
     \d
     \c database_name
