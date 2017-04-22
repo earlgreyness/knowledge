@@ -166,6 +166,14 @@ Resets the index and working tree. Any changes to tracked files in the working t
 
     git reset --hard HEAD
 
+Remove a file from a Git repository without deleting it from the local filesystem.
+
+    git rm --cached settings.py
+
+For a directory:
+
+    git rm --cached -r logs
+
 # Django
 
 This is equivalent to `GROUP BY` in raw SQL.
