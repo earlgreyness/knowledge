@@ -37,3 +37,5 @@ You must achieve the following:
         EndSubSection
         Option "metamodes" "nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
     EndSection
+
+Only the `Option "metamodes"` part is mandatory. `Section "Device"` may be left intact. Try commenting out different options for best results.
