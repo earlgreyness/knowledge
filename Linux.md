@@ -39,3 +39,6 @@ You must achieve the following:
     EndSection
 
 Only the `Option "metamodes"` part is mandatory. `Section "Device"` may be left intact. Try commenting out different options for best results.
+
+After some experimentation, it seems like commenting out the `Option "metamodes"` part while having others remain gives the best performance.
+
