@@ -16,7 +16,7 @@ If you want to apply this permanently, do the following:
     sudo nvidia-xconfig
     sudo nano /etc/X11/xorg.conf
 
-You must achieve the following:
+Working configuration:
 
     Section "Device"
         Identifier     "Device0"
@@ -35,10 +35,5 @@ You must achieve the following:
         SubSection     "Display"
             Depth       24
         EndSubSection
-        Option "metamodes" "nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+        # Option "metamodes" "nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
     EndSection
-
-Only the `Option "metamodes"` part is mandatory. `Section "Device"` may be left intact. Try commenting out different options for best results.
-
-After some experimentation, it seems like commenting out the `Option "metamodes"` part while having others remain gives the best performance.
-
