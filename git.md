@@ -3,10 +3,12 @@
 
 Merge branch B into branch A.
 
+    git checkout B
+    git pull
     git checkout A
     git merge B
 
-Create new branch and switch to it immediately:
+Create new branch from current branch and switch to it immediately:
 
     git checkout -b BRANCH_NAME
 
@@ -29,3 +31,10 @@ For a directory:
 
 
 The opposite of `git add <file>` is `git reset <file>`. So `git reset` removes a file from the staging area.
+
+There are two diffs:
+
+    git diff
+    git diff --cached
+
+The first is between working tree and HEAD. The second is betwee staging aread and HEAD.
