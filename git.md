@@ -34,8 +34,9 @@ The opposite of `git add <file>` is `git reset <file>`. So `git reset` removes a
 
 ---
 
-Show last commit diff (same as `git diff HEAD^ HEAD`):
+Difference between last (current) commit and commit before it.
 
+    git diff HEAD^ HEAD
     git show
 
 ---

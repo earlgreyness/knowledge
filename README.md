@@ -1,4 +1,6 @@
-# Open folder in Sublime Text 3
+# Sublime Text
+
+## Open folder in Sublime Text 3
 
 Open `~/.bashrc` in your favorite text editor.
 
@@ -10,34 +12,17 @@ Add the following line somewhere (for instance, in aliases section).
 
 Now you can open current directory in Sublime just by entering the command `subl3` in terminal.
 
-# SSH
+## Shortcuts
 
-## Copy key
+Delete line.
 
-This command effectively copies `~/.ssh/id_rsa.pub` to remote `.ssh/authorized_keys`.
+    Ctrl + Shift + K
 
-    ssh-copy-id m4u@10.10.0.105
+Select line.
 
-## SSH tunnel
+    Ctrl + L
 
-This command proxies socket `10.2.0.5:5411` as if we are actually on `m4u@10.10.0.105`.
-The socket will be available at `localhost:9999`.
 
-    ssh -nNT -L 9999:10.2.0.5:5411 m4u@10.10.0.105
-
-# Ubuntu 14.04 uses Upstart
-
-Services are located at
-
-    /etc/init/*.conf
-
-They are triggered by
-
-    sudo service php5-fpm [status|start|restart|stop]
-
-# Ubuntu 16.04 uses systemd
-
-    ...
 
 # nginx, php5-fpm
 

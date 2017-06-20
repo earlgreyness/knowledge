@@ -44,3 +44,41 @@ Working configuration:
         EndSubSection
         # Option "metamodes" "nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
     EndSection
+
+
+# SSH
+
+## Copy key
+
+This command effectively copies `~/.ssh/id_rsa.pub` to remote `.ssh/authorized_keys`.
+
+    ssh-copy-id m4u@10.10.0.105
+
+## SSH tunnel
+
+This command proxies socket `10.2.0.5:5411` as if we are actually on `m4u@10.10.0.105`.
+The socket will be available at `localhost:9999`.
+
+    ssh -nNT -L 9999:10.2.0.5:5411 m4u@10.10.0.105
+
+
+
+# Init systems
+
+## supervisor
+
+    supervisorctl restart [service]
+
+## Ubuntu 14.04 uses Upstart
+
+Services are located at
+
+    /etc/init/*.conf
+
+They are triggered by
+
+    sudo service php5-fpm [status|start|restart|stop]
+
+## Ubuntu 16.04 uses systemd
+
+    ...
