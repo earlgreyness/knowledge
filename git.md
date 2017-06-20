@@ -28,6 +28,15 @@ For a directory:
 
     git rm --cached -r logs
 
+
+---
+
+Completely disregard last commit and roll back to the previous one:
+
+    git reset --hard HEAD~
+
+The last commit will be completely removed from history.
+
 ---
 
 The opposite of `git add <file>` is `git reset <file>`. So `git reset` removes a file from the staging area.
