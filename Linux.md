@@ -1,3 +1,7 @@
+RAM usage:
+
+    free -m
+
 # Streams redirection
 
 To run `command` on `in.txt` and save its output in `out.txt` and its stderr in `err.txt` you should run:
@@ -47,6 +51,20 @@ Working configuration:
 
 
 # SSH
+
+## SSH without password
+
+    cd ~
+    ssh-keygen -t rsa
+    ssh user@example.com mkdir -p .ssh
+    cat ~/.ssh/id_rsa.pub | ssh user@example.com 'cat >> .ssh/authorized_keys'
+    ls ~
+
+Issue the command `ls ~/.ssh` and study contained files.
+
+    ~/.ssh/id_rsa
+    ~/.ssh/id_rsa.pub
+    ~/.ssh/known_hosts
 
 ## Copy key
 
