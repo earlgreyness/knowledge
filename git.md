@@ -28,9 +28,17 @@ For a directory:
 
     git rm --cached -r logs
 
-
+---
 
 The opposite of `git add <file>` is `git reset <file>`. So `git reset` removes a file from the staging area.
+
+---
+
+Show last commit diff (same as `git diff HEAD^ HEAD`):
+
+    git show
+
+---
 
 There are two diffs:
 
