@@ -47,3 +47,8 @@ There are two diffs:
     git diff --cached
 
 The first is between working tree and HEAD. The second is betwee staging aread and HEAD.
+
+## `git commit --amend`
+
+The `git commit --amend` command is a convenient way to fix up the most recent commit. It lets you combine staged changes with the previous commit instead of committing it as an entirely new snapshot. It can also be used to simply edit the previous commit message without changing its snapshot.
+
