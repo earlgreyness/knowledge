@@ -1,4 +1,9 @@
-RAM usage:
+# Create user
+
+    adduser kirill
+
+
+# RAM usage
 
     free -m
 
