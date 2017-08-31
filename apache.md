@@ -1,28 +1,4 @@
-Ubuntu 16.04 LTS
-to get rid of "command-not-found has crashed" problem:
-    export LANGUAGE=en_US.UTF-8
-    export LANG=en_US.UTF-8
-    export LC_ALL=en_US.UTF-8  # doesn't always work ...
-    locale-gen en_US.UTF-8
-    sudo dpkg-reconfigure locales
-
-    apt-get update
-    apt-get upgrade
-    apt-get install update-manager-core
-
-
-Upgrade Ubuntu to its latest release:
-    do-release-upgrade
-
-repeat export LANGUAGE... and stuff
-
-INSTALL GCC - C compiler!!
-    apt-get install build-essential
-
-
-#------------------------------------------------------------------------------
-# APACHE SETUP
-#------------------------------------------------------------------------------
+# Apache setup
 
     sudo apt-get --purge remove apache2
     apt-get install apache2
