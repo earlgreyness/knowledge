@@ -8,6 +8,12 @@ Install GCC:
 
     sudo apt-get install build-essential
 
+Locales:
+
+    sudo locale-gen en_US.UTF-8
+    sudo locale-gen ru_RU.UTF-8
+    sudo dpkg-reconfigure locales
+
 
 ## Optional. Get rid of "command-not-found has crashed" problem:
 
