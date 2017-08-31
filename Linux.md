@@ -14,6 +14,10 @@ Locales:
     sudo locale-gen ru_RU.UTF-8
     sudo dpkg-reconfigure locales
 
+    sudo apt-get install python3-dev
+    sudo apt-get install python3-pip
+    sudo python3 -m pip install --upgrade pip
+
 
 ## Optional. Get rid of "command-not-found has crashed" problem:
 
