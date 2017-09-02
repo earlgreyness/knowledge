@@ -86,6 +86,11 @@ To run `command` on `in.txt` and save its output in `out.txt` and its stderr in 
     command < in.txt > out.txt 2> err.txt
 
 
+## Example
+
+    cat < `which ssh-copy-id`
+
+
 # Ubuntu 16.04 and NVIDIA GeForce GTX 550 Ti
 
 To add latest open source drivers to apt, issue these commands:
