@@ -92,7 +92,7 @@ $ which ssh-copy-id
 /usr/bin/ssh-copy-id
 
 $ cat < `which ssh-copy-id`
-Contents of the program...
+(Contents of the file /usr/bin/ssh-copy-id)
 ```
 
 
