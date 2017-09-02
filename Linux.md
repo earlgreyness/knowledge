@@ -4,7 +4,7 @@
     sudo apt-get upgrade
 
 
-Install GCC:
+GCC:
 
     sudo apt-get install build-essential
 
@@ -14,6 +14,8 @@ Locales:
     sudo locale-gen ru_RU.UTF-8
     sudo dpkg-reconfigure locales
 
+Python:
+
     sudo apt-get install python3-dev
     sudo apt-get install python3-pip
     sudo python3 -m pip install --upgrade pip
@@ -21,8 +23,10 @@ Locales:
 
 Open port 80 for incoming TCP connections:
 
-    iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-    iptables-save
+    sudo apt-get install iptables-persistent
+    sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+    sudo iptables-save > /etc/iptables/rules.v4
+
 
 
 ## Optional. Get rid of "command-not-found has crashed" problem:
