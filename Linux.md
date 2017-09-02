@@ -19,6 +19,12 @@ Locales:
     sudo python3 -m pip install --upgrade pip
 
 
+Open port 80 for incoming TCP connections:
+
+    iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+    iptables-save
+
+
 ## Optional. Get rid of "command-not-found has crashed" problem:
 
     export LANGUAGE=en_US.UTF-8
@@ -29,7 +35,6 @@ Locales:
 
     sudo apt-get install update-manager-core
     sudo do-release-upgrade
-
 
 
 
