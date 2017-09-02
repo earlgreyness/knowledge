@@ -42,6 +42,32 @@ Open port 80 for incoming TCP connections:
 
 
 
+# GNU screen
+
+    ssh user@somewhere
+    screen
+    ...
+    ssh user@somewhere
+    screen -ls
+    screen -r
+    exit
+
+Switching:
+
+    ctrl + a + n
+
+New window:
+
+    ctrl + a + c
+
+Detach:
+
+    ctrl + a + d
+
+Exit:
+
+    ctrl + a + x
+
 
 
 # Create user
