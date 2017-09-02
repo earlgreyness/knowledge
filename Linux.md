@@ -88,11 +88,11 @@ To run `command` on `in.txt` and save its output in `out.txt` and its stderr in 
 
 ## Example
 ```bash
-    $ which ssh-copy-id
-    /usr/bin/ssh-copy-id
+$ which ssh-copy-id
+/usr/bin/ssh-copy-id
 
-    $ cat < `which ssh-copy-id`
-    Contents of the program...
+$ cat < `which ssh-copy-id`
+Contents of the program...
 ```
 
 
