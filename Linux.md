@@ -87,8 +87,13 @@ To run `command` on `in.txt` and save its output in `out.txt` and its stderr in 
 
 
 ## Example
+```bash
+    $ which ssh-copy-id
+    /usr/bin/ssh-copy-id
 
-    cat < `which ssh-copy-id`
+    $ cat < `which ssh-copy-id`
+    Contents of the program...
+```
 
 
 # Ubuntu 16.04 and NVIDIA GeForce GTX 550 Ti
