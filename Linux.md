@@ -65,6 +65,23 @@ Run this command and choose interactively what domains you want to set up SSL fo
 $ sudo certbot --nginx
 ```
 
+Result:
+
+    Congratulations! Your certificate and chain have been saved at:
+    /etc/letsencrypt/live/courier.dostavka.me/fullchain.pem
+    Your key file has been saved at:
+    /etc/letsencrypt/live/courier.dostavka.me/privkey.pem
+    Your cert will expire on 2017-12-05. To obtain a new or tweaked
+    version of this certificate in the future, simply run certbot again
+    with the "certonly" option. To non-interactively renew *all* of
+    your certificates, run "certbot renew"
+
+
+
+
+Set up automatic cert renewal.
+
+
 
 
 
