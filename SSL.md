@@ -60,6 +60,10 @@ Run at 03:49 on Mondays:
     sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 
 
+## Complete nginx config example
+
+[example-ssl.nginx](example-ssl.nginx)
+
 
 ## Test your configuration
 
