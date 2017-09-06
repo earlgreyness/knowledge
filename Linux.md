@@ -86,6 +86,13 @@ To run `command` on `in.txt` and save its output in `out.txt` and its stderr in 
     command < in.txt > out.txt 2> err.txt
 
 
+## Difference between `>` and `>>`
+
+The `>>` appends to a file or creates the file if it doesn't exist.
+
+The `>` overwrites the file if it exists or creates it if it doesn't exist.
+
+
 ## Example
 ```bash
 $ which ssh-copy-id
