@@ -16,7 +16,7 @@ Create config in `/etc/nginx/sites-available/`. Your `server` directive must con
     server_name courier.dostavka.me;
 
 
-[certbot.eff.org](https://certbot.eff.org/#ubuntuxenial-nginx)
+Complete instructions: https://certbot.eff.org/#ubuntuxenial-nginx
 
     sudo apt-get update
     sudo apt-get install software-properties-common
@@ -33,15 +33,6 @@ Run this command and choose interactively what domains you want to set up SSL fo
 
 Result:
 
-
-    -------------------------------------------------------------------------------
-    Congratulations! You have successfully enabled https://courier.dostavka.me
-
-    You should test your configuration at:
-    https://www.ssllabs.com/ssltest/analyze.html?d=courier.dostavka.me
-    -------------------------------------------------------------------------------
-
-
     Congratulations! Your certificate and chain have been saved at:
     /etc/letsencrypt/live/courier.dostavka.me/fullchain.pem
     Your key file has been saved at:
@@ -53,10 +44,11 @@ Result:
 
 
 
-
 ## Set up automatic cert renewal
 
-Add command `certbot renew` to `/etc/crontab`.
+Add command `certbot renew` to `/etc/crontab`. Must be run every 90 days.
+
+    30 2 * * 1 certbot renew >> /var/log/le-renew.log
 
 
 ## Make nginx config more secure
@@ -64,4 +56,10 @@ Add command `certbot renew` to `/etc/crontab`.
 
     sudo mkdir -p /etc/nginx/ssl
     sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
+
+
+
+## Test your configuration
+
+https://www.ssllabs.com/ssltest/analyze.html?d=courier.dostavka.me
 

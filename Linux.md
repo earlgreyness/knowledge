@@ -24,8 +24,8 @@ Python:
 Open ports 80 and 443 for incoming TCP connections:
 
     sudo apt-get install iptables-persistent
-    sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-    sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+    sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+    sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
     sudo iptables-save > /etc/iptables/rules.v4
 
 
