@@ -21,12 +21,17 @@ Python:
     sudo python3 -m pip install --upgrade pip
 
 
-Open port 80 for incoming TCP connections:
+Open ports 80 and 443 for incoming TCP connections:
 
     sudo apt-get install iptables-persistent
     sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+    sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
     sudo iptables-save > /etc/iptables/rules.v4
 
+
+## Acquire SSL-certificate
+
+[certbot.eff.org](https://certbot.eff.org/#ubuntuxenial-nginx)
 
 
 ## Optional. Get rid of "command-not-found has crashed" problem:
