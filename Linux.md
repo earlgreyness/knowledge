@@ -18,6 +18,7 @@ Python:
 
     sudo apt-get install python3-dev
     sudo apt-get install python3-pip
+    sudo apt-get install python3-venv
     sudo python3 -m pip install --upgrade pip
 
 
