@@ -46,9 +46,11 @@ Result:
 
 ## Set up automatic cert renewal
 
-Add command `certbot renew` to `/etc/crontab`. Must be run every 90 days.
+Add command `certbot renew` to `/etc/crontab`. Must be run at most every 90 days.
 
-    30 2 * * 1 certbot renew >> /var/log/le-renew.log
+Run at 02:30 on Mondays:
+
+    30 2 * * 1 certbot renew >> /var/log/certbot-renew.log
 
 
 ## Make nginx config more secure
