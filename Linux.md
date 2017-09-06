@@ -31,7 +31,41 @@ Open ports 80 and 443 for incoming TCP connections:
 
 ## Acquire SSL-certificate
 
+Ports 80 and 443 must be open to external world (see above).
+
+
+    sudo rm /etc/nginx/sites-enabled/default
+    sudo systemctl reload nginx
+
+
+Create config in `/etc/nginx/sites-available/`. Your `server` directive must contain at least this:
+
+    listen 80;
+    listen [::]:80;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name courier.dostavka.me;
+
+
 [certbot.eff.org](https://certbot.eff.org/#ubuntuxenial-nginx)
+
+
+```bash
+$ sudo apt-get update
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository ppa:certbot/certbot
+$ sudo apt-get update
+$ sudo apt-get install python-certbot-nginx
+```
+
+
+Run this command and choose interactively what domains you want to set up SSL for:
+
+```bash
+$ sudo certbot --nginx
+```
+
+
 
 
 ## Optional. Get rid of "command-not-found has crashed" problem:
