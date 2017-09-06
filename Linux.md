@@ -88,10 +88,11 @@ Result:
 
 
 
-Set up automatic cert renewal.
+Set up automatic cert renewal. Add command `certbot renew` to `cron`.
 
 
-
+    sudo mkdir -p /etc/nginx/ssl
+    sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 
 
 ## Optional. Get rid of "command-not-found has crashed" problem:
