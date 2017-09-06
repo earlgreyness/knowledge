@@ -1,6 +1,6 @@
 ## Acquire SSL-certificate
 
-Ports 80 and 443 must be open to external world (see above).
+Ports 80 and 443 must be open to external world [Linux.md](Linux.md).
 
 
     sudo rm /etc/nginx/sites-enabled/default
