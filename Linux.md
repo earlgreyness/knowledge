@@ -67,6 +67,15 @@ $ sudo certbot --nginx
 
 Result:
 
+
+    -------------------------------------------------------------------------------
+    Congratulations! You have successfully enabled https://courier.dostavka.me
+
+    You should test your configuration at:
+    https://www.ssllabs.com/ssltest/analyze.html?d=courier.dostavka.me
+    -------------------------------------------------------------------------------
+
+
     Congratulations! Your certificate and chain have been saved at:
     /etc/letsencrypt/live/courier.dostavka.me/fullchain.pem
     Your key file has been saved at:
