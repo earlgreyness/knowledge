@@ -18,21 +18,18 @@ Create config in `/etc/nginx/sites-available/`. Your `server` directive must con
 
 [certbot.eff.org](https://certbot.eff.org/#ubuntuxenial-nginx)
 
-
-```bash
-$ sudo apt-get update
-$ sudo apt-get install software-properties-common
-$ sudo add-apt-repository ppa:certbot/certbot
-$ sudo apt-get update
-$ sudo apt-get install python-certbot-nginx
-```
+    sudo apt-get update
+    sudo apt-get install software-properties-common
+    sudo add-apt-repository ppa:certbot/certbot
+    sudo apt-get update
+    sudo apt-get install python-certbot-nginx
 
 
+Your nginx server directive must listen to both 80 and 443 ports in order for the following command to work.
 Run this command and choose interactively what domains you want to set up SSL for:
 
-```bash
-$ sudo certbot --nginx
-```
+
+    sudo certbot --nginx
 
 Result:
 
@@ -57,7 +54,9 @@ Result:
 
 
 
-Set up automatic cert renewal. Add command `certbot renew` to `cron`.
+## Set up automatic cert renewal
+
+Add command `certbot renew` to `/etc/crontab`.
 
 
 ## Make nginx config more secure
