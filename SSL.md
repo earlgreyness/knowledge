@@ -1,18 +1,18 @@
 ## Acquire SSL-certificate
 
-Ports 80 and 443 must be open to external world [Linux.md](Linux.md).
+**Important:** ports 80 and 443 must be open to external world (see [Linux.md](Linux.md)).
 
+These two commands are probably redundant:
 
     sudo rm /etc/nginx/sites-enabled/default
     sudo systemctl reload nginx
 
 
-Create config in `/etc/nginx/sites-available/`. Your `server` directive must contain at least this:
+Create working config in `/etc/nginx/sites-available/`. nginx must listen to 80 and 443 ports.
+Certificates and SSL-commands are missing for now.
 
     listen 80;
-    listen [::]:80;
     listen 443 ssl;
-    listen [::]:443 ssl;
     server_name courier.dostavka.me;
 
 
