@@ -48,9 +48,9 @@ Result:
 
 Add command `certbot renew` to `/etc/crontab`. Must be run at most every 90 days.
 
-Run at 02:30 on Mondays:
+Run at 03:49 on Mondays:
 
-    30 2 * * 1 certbot renew >> /var/log/certbot-renew.log
+    49 3 * * 1 certbot renew >> /var/log/certbot-renew.log
 
 
 ## Make nginx config more secure
