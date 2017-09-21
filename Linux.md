@@ -194,7 +194,18 @@ They are triggered by
 
 ## Ubuntu 16.04 uses systemd
 
-    ...
+You want to create a service named `earlgrey`. Put your service systemd config in
+
+    /etc/systemd/system/earlgrey.service
+
+Now create appropriate symlink:
+
+    sudo systemctl enable earlgrey.service
+
+Start, restart:
+
+    sudo systemctl start earlgrey.service
+    sudo systemctl restart earlgrey.service
 
 
 
