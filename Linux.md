@@ -42,6 +42,11 @@ Open ports 80 and 443 for incoming TCP connections:
     sudo do-release-upgrade
 
 
+# Disk usage
+
+Best tool so far is `ncdu`. Run it from any directory and see detailed usage info by subdirectories.
+
+
 
 # GNU screen
 
