@@ -31,10 +31,8 @@ MySQL Database management software: https://www.adminer.org.
 
 Setup:
 
-    sudo apt-get install postgresql
-    sudo apt-get install postgresql-contrib
-    sudo apt-get install libpq-dev
-    sudo pip3 install psycopg2
+    sudo apt-get install postgresql postgresql-contrib libpq-dev
+    sudo python3 -m pip install psycopg2
 
 Commands:
 
@@ -67,3 +65,16 @@ Configure `/etc/postgresql/9.3/main/postgres.conf`:
 Home directory for automatically created `postgres` UNIX-user:
 
     /var/lib/postgresql
+
+
+## Dumps and Restores
+
+Use `pg_dump`.
+
+    pg_dump --dbname="postgresql://glue:****@localhost:5432/glue" > outfile
+
+To restore:
+
+    psql dbname < infile
+
+
