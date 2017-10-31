@@ -69,12 +69,17 @@ Home directory for automatically created `postgres` UNIX-user:
 
 ## Dumps and Restores
 
-Use `pg_dump`.
+Use `pg_dump`. Login as the same user as your database role. And then:
+
+    pg_dump dbname --clean --create > outfile
+
+Then locally:
+
+    sudo su postgres psql < outfile
+
+Alternativelly:
 
     pg_dump --dbname="postgresql://glue:****@localhost:5432/glue" > outfile
 
-To restore:
-
-    psql dbname < infile
 
 
