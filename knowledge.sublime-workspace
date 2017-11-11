@@ -1,0 +1,860 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"o",
+				"orderContent"
+			],
+			[
+				"addre",
+				"addressDetails"
+			],
+			[
+				"Cou",
+				"CourierLocation\tclass"
+			],
+			[
+				"date",
+				"date_assigned"
+			],
+			[
+				"last_or",
+				"last_order_date_assigned"
+			],
+			[
+				"get",
+				"get_current_order\tfunction"
+			],
+			[
+				"no",
+				"notify_multiple_devices\tfunction"
+			],
+			[
+				"send",
+				"send_push_to_everyone\tfunction"
+			],
+			[
+				"ope",
+				"operator_auth_disabled\tstatement"
+			],
+			[
+				"Res",
+				"Resource\tclass"
+			],
+			[
+				"Orde",
+				"OrderStatus\tclass"
+			],
+			[
+				"loca",
+				"local_settings_exist\tstatement"
+			],
+			[
+				"over",
+				"overwrite_settings\tparam"
+			],
+			[
+				"File",
+				"FileNotFoundError\tclass"
+			],
+			[
+				"pre",
+				"preexec_fn\tparam"
+			],
+			[
+				"ha",
+				"handle_exceptions\tfunction"
+			],
+			[
+				"roo",
+				"root_level_files\tstatement"
+			],
+			[
+				"is",
+				"is_open_now\tfunction"
+			],
+			[
+				"re",
+				"read_couriers\tfunction"
+			],
+			[
+				"open",
+				"openpyxl\tstatement"
+			],
+			[
+				"Cu",
+				"CustomModelView"
+			],
+			[
+				"Custom",
+				"CustomModelView\tclass"
+			],
+			[
+				"upd",
+				"update_geo\tfunction"
+			],
+			[
+				"chain_",
+				"restaurant_chain_id\tstatement"
+			],
+			[
+				"all",
+				"allowed_statuses\tstatement"
+			],
+			[
+				"Ord",
+				"OrderStatus\tclass"
+			],
+			[
+				"OR",
+				"OrderStatus\tclass"
+			],
+			[
+				"O",
+				"OrderStatus\tclass"
+			],
+			[
+				"TO",
+				"TO_RESTAURANT\tstatement"
+			],
+			[
+				"par",
+				"parse_args\tfunction"
+			],
+			[
+				"close",
+				"closest_metro_station"
+			],
+			[
+				"clo",
+				"closest_metro_station"
+			],
+			[
+				"cha",
+				"chain_id\tstatement"
+			],
+			[
+				"name",
+				"namedtuple\tfunction"
+			],
+			[
+				"address",
+				"address_after\tstatement"
+			],
+			[
+				"NotImp",
+				"NotImplementedError\tclass"
+			],
+			[
+				"Re",
+				"RestaurantForm"
+			],
+			[
+				"ge",
+				"get_data_for_form"
+			],
+			[
+				"edi",
+				"edit_template"
+			],
+			[
+				"Va",
+				"validators\tmodule"
+			],
+			[
+				"sch",
+				"schedule_mon_from\tstatement"
+			],
+			[
+				"sc",
+				"schedule_mon_from\tstatement"
+			],
+			[
+				"from",
+				"from_iterable\tfunction"
+			],
+			[
+				"Resta",
+				"RestaurantChain"
+			],
+			[
+				"Me",
+				"MetaMixin\tclass"
+			],
+			[
+				"gene",
+				"generate_password_hash\tfunction"
+			],
+			[
+				"can",
+				"can_view_details"
+			],
+			[
+				"Tex",
+				"TextAreaField"
+			],
+			[
+				"Comm",
+				"COMMON_FORMATTERS"
+			],
+			[
+				"colu",
+				"column_formatters"
+			],
+			[
+				"CO",
+				"COMMON_LABELS\tstatement"
+			],
+			[
+				"COM",
+				"COMMON_FORMATTERS"
+			],
+			[
+				"pass",
+				"password_hash\tstatement"
+			],
+			[
+				"resta",
+				"restaurant_2\tstatement"
+			],
+			[
+				"couriers",
+				"couriers_to_notify\tstatement"
+			],
+			[
+				"has",
+				"has_active_order\tstatement"
+			],
+			[
+				"is_",
+				"is_valid_number\timport"
+			],
+			[
+				"fo",
+				"format_number"
+			],
+			[
+				"defa",
+				"default_status\tfunction"
+			],
+			[
+				"hos",
+				"host_type\tfunction"
+			],
+			[
+				"las",
+				"last_push_date"
+			],
+			[
+				"Cour",
+				"CourierStatus"
+			],
+			[
+				"acc",
+				"ACCEPTED_DATE_FORMAT\tstatement"
+			],
+			[
+				"cou",
+				"courier_status_choices\tstatement"
+			],
+			[
+				"Couri",
+				"CourierStatus\tclass"
+			],
+			[
+				"phone",
+				"phone_number"
+			],
+			[
+				"Tes",
+				"TestResource\tclass"
+			],
+			[
+				"token",
+				"token_required\tfunction"
+			],
+			[
+				"token_",
+				"token_needs_refreshing"
+			],
+			[
+				"app",
+				"application_id\tstatement"
+			],
+			[
+				"tok",
+				"token_serializer\tstatement"
+			],
+			[
+				"toke",
+				"token_needs_refreshing"
+			],
+			[
+				"Api",
+				"ApiException\tclass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Linux.md",
+			"settings":
+			{
+				"buffer_size": 5576,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 480.0,
+		"last_filter": "pss",
+		"selected_items":
+		[
+			[
+				"pss",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"p",
+				"Preferences: Settings"
+			],
+			[
+				"pcip",
+				"Package Control: Install Package"
+			],
+			[
+				"pref",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"ps",
+				"Preferences: Settings"
+			],
+			[
+				"pref u",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
+				"pcrp",
+				"Package Control: Remove Package"
+			],
+			[
+				"ssji",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				"ssjin",
+				"Set Syntax: HTML (Jinja2)"
+			],
+			[
+				"ssre",
+				"Set Syntax: requirements.txt"
+			],
+			[
+				"ssma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ssng",
+				"Set Syntax: nginx"
+			],
+			[
+				"ssi",
+				"Set Syntax: INI"
+			],
+			[
+				"ssn",
+				"Set Syntax: nginx"
+			],
+			[
+				"ssc",
+				"Set Syntax: C++"
+			]
+		],
+		"width": 559.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/kirill/knowledge"
+	],
+	"file_history":
+	[
+		"/home/kirill/Downloads/courier_2017-09-01_8tdwzghg.sql",
+		"/home/kirill/Desktop/eda-me/public_html/simpla/.passwd",
+		"/home/kirill/Desktop/FileZilla.xml",
+		"/home/kirill/knowledge/server_setup.txt",
+		"/home/kirill/courier-backend/send_pushes.py",
+		"/home/kirill/courier-backend/logistics/views/api.py",
+		"/home/kirill/courier-backend/backup.py",
+		"/home/kirill/courier-backend/logistics/settings_sample.py",
+		"/home/kirill/courier-backend/logistics/settings.py",
+		"/home/kirill/courier-backend/logistics/__init__.py",
+		"/home/kirill/Dropbox/Uploads/Preferences.sublime-settings",
+		"/home/kirill/courier-dashboard/fabfile.py",
+		"/home/kirill/Downloads/courier_2017-08-25_il1ok2ka.sql",
+		"/home/kirill/courier-backend/.gitignore",
+		"/home/kirill/Downloads/courier_2017-08-24_1i0r836n.sql",
+		"/home/kirill/courier-backend/crontab",
+		"/home/kirill/courier-backend/logistics/utils.py",
+		"/home/kirill/courier-backend/dump_db.sh",
+		"/home/kirill/courier-backend/run.py",
+		"/home/kirill/courier-backend/logistics/models/restaurant.py",
+		"/home/kirill/courier-backend/logistics/geo.py",
+		"/home/kirill/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/kirill/courier-backend/logistics/requirements.in",
+		"/home/kirill/courier-backend/logistics/views/admin.py",
+		"/home/kirill/courier-backend/logistics/models/order.py",
+		"/home/kirill/courier-backend/logistics/models/common.py",
+		"/home/kirill/Downloads/SpaceRangersHD/SpaceRangersHD/start",
+		"/home/kirill/courier-backend/API.md",
+		"/home/kirill/courier-backend/dashboard_API.md",
+		"/home/kirill/courier-backend/logistics/models/__init__.py",
+		"/home/kirill/courier-backend/logistics/models/courier.py",
+		"/home/kirill/courier-backend/fabfile.py",
+		"/home/kirill/courier-backend/load_couriers.py",
+		"/home/kirill/courier-backend/logistics/requirements.txt",
+		"/home/kirill/Desktop/in.txt",
+		"/home/kirill/Desktop/out.txt",
+		"/home/kirill/courier-backend/logistics/views/operator.py",
+		"/home/kirill/courier-backend/logistics/templates/custom_restaurant_details.html",
+		"/home/kirill/Desktop/21_KK.txt",
+		"/home/kirill/Desktop/do.py",
+		"/home/kirill/courier-backend/logistics/templates/included_restaurant_form.html",
+		"/home/kirill/courier-backend/logistics/models/user.py",
+		"/home/kirill/courier-backend/logistics/templates/custom_restaurant_edit.html",
+		"/home/kirill/courier-backend/logistics/templates/index_admin.html",
+		"/home/kirill/courier-backend/logs/app.log",
+		"/home/kirill/Downloads/2017-08-18_15-19-23.csv",
+		"/home/kirill/courier-dashboard/courier-dashboard/package.json",
+		"/home/kirill/courier-dashboard/courier-dashboard/src/index.html",
+		"/home/kirill/courier-dashboard/courier-dashboard/building.md",
+		"/home/kirill/Downloads/tumblr_ndfcul2qXp1tae4cao1_250.gif",
+		"/home/kirill/knowledge/Linux.md",
+		"/home/kirill/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/kirill/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
+		"/home/kirill/courier-backend/courier_nginx",
+		"/home/kirill/Desktop/dec.py",
+		"/home/kirill/courier-frontend/index.html",
+		"/home/kirill/courier-backend/logistics/models.py",
+		"/home/kirill/courier-backend/logistics/views/__init__.py",
+		"/home/kirill/courier-backend/logistics/operator.py",
+		"/home/kirill/courier-backend/logistics/admin.py",
+		"/home/kirill/courier-backend/logistics/api.py",
+		"/home/kirill/courier-backend/courier-backend.sublime-project",
+		"/home/kirill/Desktop/pretty/prettify.py",
+		"/home/kirill/Desktop/phones/parse.py",
+		"/home/kirill/Desktop/phones/out.txt",
+		"/home/kirill/Desktop/Side Project/filter.py",
+		"/home/kirill/Desktop/phones/in/8.txt",
+		"/home/kirill/courier-backend/logistics/logs/app.log",
+		"/home/kirill/courier-backend/logs/.gitkeep",
+		"/home/kirill/courier-backend/logistics/push.py",
+		"/home/kirill/Downloads/decoded.bin",
+		"/home/kirill/courier-backend/courier_uwsgi.ini",
+		"/home/kirill/courier-backend/courier_uwsgi.conf",
+		"/home/kirill/courier-backend/courier_uwsgi.py",
+		"/home/kirill/Desktop/01.txt",
+		"/home/kirill/Desktop/result.txt",
+		"/home/kirill/Desktop/filter2.py",
+		"/home/kirill/Desktop/12.txt",
+		"/home/kirill/Desktop/filter.py",
+		"/home/kirill/Downloads/Мусорные группы 6.txt",
+		"/home/kirill/courier-backend/utils.py",
+		"/home/kirill/courier-backend/settings.py"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 139.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"naytro",
+			"Заказать звонок",
+			"Оформить заказ",
+			"accepted",
+			"LOCATION_MOCKING",
+			"parse(",
+			"postg",
+			"os.path",
+			"choices",
+			"strip",
+			"Customer",
+			"get_closest_metro_station()",
+			"set_coordinates_from_address",
+			"LocationMixin",
+			"phone_n",
+			"set_coordinates_from_address",
+			"chain",
+			"check_password",
+			"generate_pass",
+			".name",
+			"Common",
+			"TextField",
+			"TextAre",
+			"token_seri",
+			"OrderStatus",
+			"Push",
+			".value",
+			"foot",
+			"car",
+			"current_status",
+			"last_push_date",
+			"token_required",
+			"phone",
+			"ApiEx",
+			"abort",
+			"_abort(",
+			"check"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"CustomModelView",
+			".name",
+			"fail("
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Linux.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1475,
+								1475
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1501.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "knowledge.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"index.tpl",
+				"design/dostavka_1/html/index.tpl"
+			],
+			[
+				"passwd",
+				"simpla/.passwd"
+			],
+			[
+				"run",
+				"run.py"
+			],
+			[
+				"api",
+				"logistics/views/api.py"
+			],
+			[
+				"ss",
+				"logistics/settings_sample.py"
+			],
+			[
+				"dash",
+				"dashboard_API.md"
+			],
+			[
+				"sett",
+				"logistics/settings.py"
+			],
+			[
+				"push",
+				"send_pushes.py"
+			],
+			[
+				"logisti",
+				"logistics/__init__.py"
+			],
+			[
+				"oper",
+				"logistics/views/operator.py"
+			],
+			[
+				"ba",
+				"backup.py"
+			],
+			[
+				"r",
+				"run.py"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"se",
+				"logistics/settings.py"
+			],
+			[
+				"fab",
+				"fabfile.py"
+			],
+			[
+				"geo",
+				"logistics/geo.py"
+			],
+			[
+				"rep",
+				"logistics/models/restaurant.py"
+			],
+			[
+				"ru",
+				"run.py"
+			],
+			[
+				"sp",
+				"logistics/settings.py"
+			],
+			[
+				"req",
+				"logistics/requirements.in"
+			],
+			[
+				"cp",
+				"logistics/models/courier.py"
+			],
+			[
+				"send",
+				"send_pushes.py"
+			],
+			[
+				"da",
+				"dashboard_API.md"
+			],
+			[
+				"am",
+				"API.md"
+			],
+			[
+				"rea",
+				"logistics/models/restaurant.py"
+			],
+			[
+				"ad",
+				"logistics/views/admin.py"
+			],
+			[
+				"courier",
+				"logistics/models/courier.py"
+			],
+			[
+				"res",
+				"logistics/models/restaurant.py"
+			],
+			[
+				"dm",
+				"dashboard_API.md"
+			],
+			[
+				"comm",
+				"logistics/models/common.py"
+			],
+			[
+				"commo",
+				"logistics/models/common.py"
+			],
+			[
+				"courier.py",
+				"logistics/models/courier.py"
+			],
+			[
+				"admin.",
+				"logistics/views/admin.py"
+			],
+			[
+				"order",
+				"logistics/models/order.py"
+			],
+			[
+				"opera",
+				"logistics/views/operator.py"
+			],
+			[
+				"rn",
+				"run.py"
+			],
+			[
+				"com",
+				"logistics/models/common.py"
+			],
+			[
+				"resta",
+				"logistics/models/restaurant.py"
+			],
+			[
+				"admin",
+				"logistics/views/admin.py"
+			],
+			[
+				"ngin",
+				"courier_nginx"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"ri",
+				"logistics/requirements.in"
+			],
+			[
+				"requ",
+				"logistics/requirements.in"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 317.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
