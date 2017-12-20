@@ -1,5 +1,10 @@
 # MySQL
 
+    sudo apt-get update
+    sudo apt-get install mariadb-server mariadb-client
+
+    sudo mysql_secure_installation
+
 ## Creating database and user
 
     CREATE USER 'sa'@'localhost' IDENTIFIED BY 'password';
