@@ -8,6 +8,10 @@ GCC:
 
     sudo apt-get install build-essential
 
+tcl language for redis test suite:
+
+    sudo apt-get install tcl
+
 Locales:
 
     sudo locale-gen en_US.UTF-8
