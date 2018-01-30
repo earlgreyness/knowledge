@@ -31,6 +31,10 @@ Run this command and choose interactively what domains you want to set up SSL fo
 
     sudo certbot --nginx
 
+This command wouldn't work right now. Better command:
+
+    sudo certbot --authenticator standalone --installer nginx -d example.com --pre-hook "systemctl stop nginx" --post-hook "systemctl start nginx"
+
 Result:
 
     Congratulations! Your certificate and chain have been saved at:
