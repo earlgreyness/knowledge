@@ -28,6 +28,10 @@ For a directory:
 
     git rm --cached -r logs
 
+Extract file from staged state (opposite of `git add`):
+
+    git reset filename.py
+
 
 ---
 
