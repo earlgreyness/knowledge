@@ -32,6 +32,14 @@ Extract file from staged state (opposite of `git add`):
 
     git reset filename.py
 
+---
+
+Commit branch as a single commit to the master branch:
+
+    git checkout master
+    git merge --squash <branch-name>
+
+It's not nesessery to push the <branch-name> to remote. If it wasn't it's stay localy and absoludely hidden for other developers
 
 ---
 
