@@ -1,7 +1,6 @@
 Setup:
 
     sudo apt-get install postgresql postgresql-contrib libpq-dev
-    sudo python3 -m pip install psycopg2
 
 Commands:
 
@@ -29,7 +28,6 @@ Configure `/etc/postgresql/9.5/main/postgres.conf`:
 
     max_connections = 1000
     ssl = false
-    client_encoding = utf8  # not necessary
 
 Then:
 
@@ -44,7 +42,7 @@ Home directory for automatically created `postgres` UNIX-user:
 
 Use `pg_dump`. Login as the same user as your database role. And then:
 
-    pg_dump dbname --clean --create > outfile
+    pg_dump dbName --create --clean > outfile
 
 Then locally:
 
@@ -58,7 +56,7 @@ Alternativelly:
 
 Create dump:
 
-    LC_ALL=ru_RU.UTF-8 pg_dump --dbname="postgresql://glue:****@localhost:5432/glue" --create --clean | gzip -9 > dump.sql.gz
+    pg_dump --dbname="postgresql://glue:****@localhost:5432/glue" --create --clean | gzip -9 > dump.sql.gz
 
 Restore from dump:
 
