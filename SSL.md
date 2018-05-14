@@ -47,30 +47,16 @@ Result:
 
 
 
-## Set up automatic cert renewal
+## Automatic renewal
 
-Add command `certbot renew` to `/etc/crontab`. Must be run at most every 90 days.
-
-Run at 03:49 on Mondays:
-
-    49 3 * * 1 certbot renew >> /var/log/certbot-renew.log
-
-
-## Important!
-
-After installing certbot, there are two systemd units created:
+Automatic renewal is already set after installation:
 
     /lib/systemd/system/certbot.service
     /lib/systemd/system/certbot.timer
 
-They are responsible for automated certificates renewal twice daily. Timer unit sets crontab rule,
-and the service unit actually fires `certbot -q renew`. Flag `-q` means `--quiet` -- no stdout.
+To test:
 
-You can disable these units since we've already set up automatic renewal:
-
-    systemctl disable certbot.service
-    systemctl disable certbot.timer
-    systemctl stop certbot.timer
+    sudo certbot renew --dry-run
 
 
 ## Make nginx config more secure
