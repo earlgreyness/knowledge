@@ -119,10 +119,30 @@ Exit:
     ctrl + a + x
 
 
+# Users, Groups
 
-# Create user
+## Create user
 
     adduser kirill
+
+## Add existing user to group
+
+    usermod -a -G groupName userName
+
+## Delete user
+
+With home directory:
+
+    userdel -r userName
+
+
+## Delete user from group
+
+    deluser userName groupName
+
+## Delete group
+
+    groupdel kirill
 
 
 # RAM usage
