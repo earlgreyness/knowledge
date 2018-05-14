@@ -1,39 +1,3 @@
-# MySQL
-
-    sudo apt-get update
-    sudo apt-get install mariadb-server mariadb-client
-
-    sudo mysql_secure_installation
-
-## Creating database and user
-
-    CREATE USER 'sa'@'localhost' IDENTIFIED BY 'password';
-    CREATE DATABASE sa_blog
-      DEFAULT CHARACTER SET utf8mb4
-      DEFAULT COLLATE utf8mb4_unicode_ci;
-    GRANT ALL ON sa_blog.* TO 'sa'@'localhost';
-    FLUSH PRIVILEGES;
-
-## wp-config.php
-
-    /** Кодировка базы данных для создания таблиц. */
-    define('DB_CHARSET', 'utf8mb4');
-
-    /** Схема сопоставления. Не меняйте, если не уверены. */
-    define('DB_COLLATE', 'utf8mb4_unicode_ci');
-
-## Dumps
-
-    mysqldump -u username -ppassword --comments --add-drop-table sa_blog > dump.sql
-
-## Other
-
-MySQL Database management software: https://www.adminer.org.
-
-
-
-# PostgreSQL
-
 Setup:
 
     sudo apt-get install postgresql postgresql-contrib libpq-dev
@@ -57,22 +21,26 @@ Enter the shell:
     \d
     \c database_name
 
-Create file `/etc/postgresql/9.3/main/environment` with this content:
+Create file `/etc/postgresql/9.5/main/environment` with this content:
 
     PGCLIENTENCODING=utf8
 
-Configure `/etc/postgresql/9.3/main/postgres.conf`:
+Configure `/etc/postgresql/9.5/main/postgres.conf`:
 
     max_connections = 1000
     ssl = false
-    client_encoding = utf8
+    client_encoding = utf8  # not necessary
+
+Then:
+
+    sudo systemctl restart postgresql
 
 Home directory for automatically created `postgres` UNIX-user:
 
     /var/lib/postgresql
 
 
-## Dumps and Restores
+# Dumps and Restores
 
 Use `pg_dump`. Login as the same user as your database role. And then:
 
@@ -86,5 +54,13 @@ Alternativelly:
 
     pg_dump --dbname="postgresql://glue:****@localhost:5432/glue" > outfile
 
+## Full example
 
+Create dump:
+
+    LC_ALL=ru_RU.UTF-8 pg_dump --dbname="postgresql://glue:****@localhost:5432/glue" --create --clean | gzip -9 > dump.sql.gz
+
+Restore from dump:
+
+    gunzip < dump.sql.gz | sudo -u postgres psql
 

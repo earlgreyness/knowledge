@@ -26,6 +26,8 @@ Python:
     sudo python3 -m pip install --upgrade pip
     sudo python3 -m pip install --upgrade setuptools
 
+    sudo python3 -m pip install uwsgi
+
 
 Open ports 80 and 443 for incoming TCP connections:
 
@@ -33,6 +35,32 @@ Open ports 80 and 443 for incoming TCP connections:
     sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
     sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
     sudo iptables-save > /etc/iptables/rules.v4
+
+
+Create necessary users:
+
+    sudo adduser ads
+
+
+## Edit `/etc/sysctl.conf` for max performance:
+
+For Redis:
+
+    vm.overcommit_memory = 1
+
+For uWSGI:
+
+    # Increase number of incoming connections
+    net.core.somaxconn = 4096
+
+Then restart sysctl by:
+
+    sudo sysctl -p /etc/sysctl.conf
+
+
+Don't forget to add uWSGI users to `www-data` group:
+
+    sudo usermod -a -G ads www-data
 
 
 ## Optional. Get rid of "command-not-found has crashed" problem:
@@ -50,6 +78,17 @@ Open ports 80 and 443 for incoming TCP connections:
 # Disk usage
 
 Best tool so far is `ncdu`. Run it from any directory and see detailed usage info by subdirectories.
+
+
+
+# Download file from server
+
+    scp username@remote:/file/to/send /where/to/put
+
+
+# Upload file to server
+
+    scp /file/to/send username@remote:/where/to/put
 
 
 
@@ -105,6 +144,7 @@ The `>` overwrites the file if it exists or creates it if it doesn't exist.
 
 
 ## Example
+
 ```bash
 $ which ssh-copy-id
 /usr/bin/ssh-copy-id
@@ -153,61 +193,4 @@ Working configuration:
         EndSubSection
         # Option "metamodes" "nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
     EndSection
-
-
-
-
-# Init systems
-
-## supervisor
-
-    supervisorctl restart [service]
-
-## Ubuntu 14.04 uses Upstart
-
-Services are located at
-
-    /etc/init/*.conf
-
-They are triggered by
-
-    sudo service php5-fpm [status|start|restart|stop]
-
-## Ubuntu 16.04 uses systemd
-
-You want to create a service named `earlgrey`. Put your service systemd config in
-
-    /etc/systemd/system/earlgrey.service
-
-Now create appropriate symlink:
-
-    sudo systemctl enable earlgrey.service
-
-Start, restart:
-
-    sudo systemctl start earlgrey.service
-    sudo systemctl restart earlgrey.service
-
-
-
-
-# nginx, php5-fpm
-
-    sudo apt-get install nginx
-    sudo apt-get install php5-fpm
-
-Unix socket file location.
-
-    /var/run/php5-fpm.sock
-
-Enabling sites.
-
-    sudo ln -s /etc/nginx/sites-available/mirzakonov /etc/nginx/sites-enabled/
-
-Check config syntax.
-
-    nginx -t
-
-
-
 

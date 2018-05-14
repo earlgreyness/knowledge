@@ -8,11 +8,10 @@ These two commands are probably redundant:
     sudo systemctl reload nginx
 
 
-Create working config in `/etc/nginx/sites-available/`. nginx must listen to 80 and 443 ports.
+Create working config in `/etc/nginx/sites-available/` only for port 80. nginx must listen to 80 and 443 ports.
 Certificates and SSL-commands are missing for now.
 
     listen 80;
-    listen 443 ssl;
     server_name courier.dostavka.me;
 
 
@@ -30,6 +29,9 @@ Run this command and choose interactively what domains you want to set up SSL fo
 
 
     sudo certbot --nginx
+
+
+Agree to redirection.
 
 
 Result:
