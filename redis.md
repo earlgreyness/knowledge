@@ -1,3 +1,36 @@
+# Installation
+
+Install redis from source:
+
+    https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04
+
+Settings different from defaults:
+
+
+    supervised systemd
+    logfile /var/log/redis/redis.log
+    dir /var/lib/redis
+    requirepass PASSWORD
+    maxmemory 128mb
+    maxmemory-policy allkeys-lru
+
+
+Create directory for logs:
+
+    sudo mkdir /var/log/redis
+    sudo chown redis:redis /var/log/redis
+
+
+Enable `vm.overcommit_memory=1` (see below).
+
+Then:
+
+    systemctl restart redis
+
+
+
+# Troubleshooting
+
 When you see errors like these:
 
     4294:C 03 Apr 16:58:16.114 * RDB: 221 MB of memory used by copy-on-write
