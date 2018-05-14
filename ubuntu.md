@@ -1,92 +1,16 @@
-# New VPS. Ubuntu 16.04 64bit
-
-    sudo apt-get update
-    sudo apt-get upgrade
-
-
-GCC:
-
-    sudo apt-get install build-essential
-
-tcl language for redis test suite:
-
-    sudo apt-get install tcl
-
-Locales:
-
-    sudo locale-gen en_US.UTF-8
-    sudo locale-gen ru_RU.UTF-8
-    sudo dpkg-reconfigure locales
-
-Python:
-
-    sudo apt-get install python3-dev
-    sudo apt-get install python3-pip
-    sudo apt-get install python3-venv
-    sudo python3 -m pip install --upgrade pip
-    sudo python3 -m pip install --upgrade setuptools
-
-    sudo python3 -m pip install uwsgi
-
-
-Open ports 80 and 443 for incoming TCP connections:
-
-    sudo apt-get install iptables-persistent
-    sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
-    sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
-    sudo iptables-save > /etc/iptables/rules.v4
-
-
-Create necessary users:
-
-    sudo adduser ads
-
-
-## Edit `/etc/sysctl.conf` for max performance:
-
-For Redis:
-
-    vm.overcommit_memory = 1
-
-For uWSGI:
-
-    # Increase number of incoming connections
-    net.core.somaxconn = 4096
-
-Then restart sysctl by:
-
-    sudo sysctl -p /etc/sysctl.conf
-
-
-Don't forget to add uWSGI users to `www-data` group:
-
-    sudo usermod -a -G ads www-data
-
-
-## Optional. Get rid of "command-not-found has crashed" problem:
-
-    export LANGUAGE=en_US.UTF-8
-    export LANG=en_US.UTF-8
-    export LC_ALL=en_US.UTF-8  # doesn't always work ...
-    locale-gen en_US.UTF-8
-    sudo dpkg-reconfigure locales
-
-    sudo apt-get install update-manager-core
-    sudo do-release-upgrade
-
-
 # Disk usage
 
 Best tool so far is `ncdu`. Run it from any directory and see detailed usage info by subdirectories.
 
 
+# Downloading, uploading files
 
-# Download file from server
+Download file from server:
 
     scp username@remote:/file/to/send /where/to/put
 
 
-# Upload file to server
+Upload file to server:
 
     scp /file/to/send username@remote:/where/to/put
 
@@ -121,26 +45,24 @@ Exit:
 
 # Users, Groups
 
-## Create user
+Create user:
 
     adduser kirill
 
-## Add existing user to group
+Add existing user to group:
 
     usermod -a -G groupName userName
 
-## Delete user
-
-With home directory:
+Delete user (with home directory):
 
     userdel -r userName
 
 
-## Delete user from group
+Delete user from group
 
     deluser userName groupName
 
-## Delete group
+Delete group
 
     groupdel kirill
 
@@ -172,6 +94,35 @@ $ which ssh-copy-id
 $ cat < `which ssh-copy-id`
 (Contents of the file /usr/bin/ssh-copy-id)
 ```
+
+# SSH
+
+## SSH without password
+
+    cd ~
+    ssh-keygen -t rsa
+    ssh user@example.com mkdir -p .ssh
+    cat ~/.ssh/id_rsa.pub | ssh user@example.com 'cat >> .ssh/authorized_keys'
+    ls ~
+
+Issue the command `ls ~/.ssh` and study contained files.
+
+    ~/.ssh/id_rsa
+    ~/.ssh/id_rsa.pub
+    ~/.ssh/known_hosts
+
+## Copy key
+
+This command effectively copies `~/.ssh/id_rsa.pub` to remote `.ssh/authorized_keys`.
+
+    ssh-copy-id m4u@10.10.0.105
+
+## SSH tunnel
+
+This command proxies socket `10.2.0.5:5411` as if we are actually on `m4u@10.10.0.105`.
+The socket will be available at `localhost:9999`.
+
+    ssh -nNT -L 9999:10.2.0.5:5411 m4u@10.10.0.105
 
 
 # Ubuntu 16.04 and NVIDIA GeForce GTX 550 Ti
