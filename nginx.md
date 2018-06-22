@@ -9,21 +9,21 @@
 
 Follow the instructions: https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/
 
-1. Verify that `apache2-utils` is installed.
+1\. Verify that `apache2-utils` is installed.
 
     sudo apt-get install apache2-utils
 
-2. Create a password file and a first user. Run the `htpasswd` utility with the `-c` flag (to create a new file), the file pathname as the first argument, and the username as the second argument:
+2\. Create a password file and a first user. Run the `htpasswd` utility with the `-c` flag (to create a new file), the file pathname as the first argument, and the username as the second argument:
 
     $ sudo htpasswd -c /etc/apache2/.htpasswd user1
 
 Press Enter and type the password for **user1** at the prompts.
 
-3. Create additional user-password pairs. Omit the `-c` flag because the file already exists:
+3\. Create additional user-password pairs. Omit the `-c` flag because the file already exists:
 
     $ sudo htpasswd /etc/apache2/.htpasswd user2
 
-4. You can confirm that the file contains paired usernames and encrypted passwords:
+4\. You can confirm that the file contains paired usernames and encrypted passwords:
 
     $ cat /etc/apache2/.htpasswd
     user1:$apr1$/woC1jnP$KAh0SsVn5qeSMjTtn0E9Q0
