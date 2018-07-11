@@ -6,15 +6,13 @@
     "caret_extra_width": 2,
     "caret_style": "wide",
     "drag_text": false,
-    "draw_indent_guides": false,
+    "draw_indent_guides": true,
     "draw_minimap_border": true,
     "ensure_newline_at_eof_on_save": true,
     "fallback_encoding": "Cyrillic (Windows 1251)",
-    "font_face": "DejaVu Sans Mono",
     "font_options":
     [
     ],
-    "font_size": 9,
     "highlight_line": true,
     "highlight_modified_tabs": true,
     "ignored_packages":
@@ -26,14 +24,12 @@
         "draw_normal",
         "draw_active"
     ],
-    "indent_to_bracket": true,
-    "line_padding_bottom": 0,
-    "line_padding_top": 0,
+    "indent_to_bracket": false,
+    "line_padding_bottom": 2,
+    "line_padding_top": 2,
     "overlay_scroll_bars": "enabled",
     "rulers":
     [
-        79,
-        99
     ],
     "scroll_speed": 0,
     "shift_tab_unindent": true,
