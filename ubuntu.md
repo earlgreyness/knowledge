@@ -1,3 +1,18 @@
+# Shell (Bash)
+
+## How to run command directly, but not its alias
+
+You should prefix the command with the backslash symbol `\`. For instance:
+
+    \ls
+
+
+## Why do some python scripts begin with #!/usr/bin/env python?
+
+If you have several versions of Python installed, `/usr/bin/env` will ensure the interpreter used is the first one on your environment's `$PATH`.
+
+
+
 # Disk usage
 
 Best tool so far is `ncdu`. Run it from any directory and see detailed usage info by subdirectories.
