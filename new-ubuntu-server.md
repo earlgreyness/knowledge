@@ -1,16 +1,18 @@
-# New VPS. Ubuntu 16.04 64bit
+# New VPS. Ubuntu 18.04 64bit
 
     sudo apt-get update
     sudo apt-get upgrade
+
+
+Change hostname:
+
+https://askubuntu.com/questions/87665/how-do-i-change-the-hostname-without-a-restart
 
 
 GCC:
 
     sudo apt-get install build-essential
 
-tcl language for redis test suite:
-
-    sudo apt-get install tcl
 
 Locales:
 
@@ -18,14 +20,22 @@ Locales:
     sudo locale-gen ru_RU.UTF-8
     sudo dpkg-reconfigure locales
 
+Software:
+
+    sudo apt-get install sox libsox-fmt-mp3
+    sudo apt-get install postgresql postgresql-contrib libpq-dev
+    sudo apt-get install redis-server
+    sudo apt-get install nginx
+    sudo apt-get install htop ncdu mc
+
 Python:
 
     sudo apt-get install python3-dev
     sudo apt-get install python3-pip
     sudo apt-get install python3-venv
-    sudo python3 -m pip install --upgrade pip
-    sudo python3 -m pip install --upgrade setuptools
-
+    sudo apt install python3-widgetsnbextension
+    sudo apt install python3-testresources
+    sudo python3 -m pip install --upgrade pip setuptools wheel
     sudo python3 -m pip install uwsgi
 
 
