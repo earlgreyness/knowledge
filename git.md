@@ -1,4 +1,8 @@
+Squash last 3 commits together (https://stackoverflow.com/a/5201642)
 
+    git reset --soft HEAD~3 && git commit
+
+You should have to write the new commit message from scratch.
 
 
 Merge branch B into branch A.
