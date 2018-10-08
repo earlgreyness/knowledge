@@ -5,6 +5,11 @@ Squash last 3 commits together (https://stackoverflow.com/a/5201642)
 You should have to write the new commit message from scratch.
 
 
+Delete remote branch:
+
+    git push origin --delete BRANCH_NAME
+
+
 Merge branch B into branch A.
 
     git checkout B
