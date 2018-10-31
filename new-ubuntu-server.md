@@ -26,7 +26,7 @@ Software:
     sudo apt-get install postgresql postgresql-contrib libpq-dev
     sudo apt-get install redis-server
     sudo apt-get install nginx
-    sudo apt-get install htop ncdu mc
+    sudo apt-get install htop ncdu mc curl
 
 Python:
 
