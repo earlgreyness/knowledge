@@ -47,9 +47,15 @@ Open ports 80 and 443 for incoming TCP connections:
     sudo iptables-save > /etc/iptables/rules.v4
 
 
+## Users
+
 Create necessary users:
 
     sudo adduser ads
+
+Don't forget to add uWSGI users to `www-data` group:
+
+    sudo usermod -a -G ads www-data
 
 
 ## Edit `/etc/sysctl.conf` for max performance:
@@ -66,8 +72,3 @@ For uWSGI:
 Then restart sysctl by:
 
     sudo sysctl -p /etc/sysctl.conf
-
-
-Don't forget to add uWSGI users to `www-data` group:
-
-    sudo usermod -a -G ads www-data
