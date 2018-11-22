@@ -58,6 +58,69 @@ Don't forget to add uWSGI users to `www-data` group:
     sudo usermod -a -G ads www-data
 
 
+## User services
+
+### Enable persistent journalctl Storage
+
+https://serverfault.com/questions/806469/how-to-allow-a-user-to-use-journalctl-to-see-user-specific-systemd-service-logs
+https://www.freedesktop.org/software/systemd/man/journald.conf.html
+https://lists.freedesktop.org/archives/systemd-devel/2016-October/037554.html
+
+Edit journalctl config:
+
+    $ sudo nano /etc/systemd/journald.conf
+
+Add line
+
+    Storage=persistent
+
+Restart:
+    
+    $ sudo systemctl daemon-reload
+    $ sudo systemctl restart systemd-journald.service
+
+### Auto-start and lingering
+
+As root, give the user permission to run services when they're not logged in:
+To enable start right after boot, regardless of user session:
+
+    sudo loginctl enable-linger username
+
+### Location of unit files:
+
+    ~/.config/systemd/user/
+
+To enable unit (make it start automatically):
+
+    systemctl --user enable myunit.service
+    systemctl --user start myunit.service
+    systemctl --user status myunit.service
+
+To restart:
+
+    systemctl --user restart myunit.service
+
+if the unit file itself was changed, this is how to restart:
+
+    systemctl --user daemon-reload
+    systemctl --user restart myunit.service
+
+
+### Reading the journal:
+
+    journalctl --user -u myunit.service
+
+For old Ubuntu 16.04:
+
+    journalctl --user --user-unit myunit.service
+
+Python buffers sys.stdout by default. If stdout is connected to tty console, it flushes on `\n` symbols. Otherwise, when stdout is connected to PIPE (which is what happens when you use systemd user units), it flushes unpredictably. Use loggers or do this (StreamHandler flushes each record), or set environment variable for the whole python interpreter. 12 factor apps recommend non-buffered output, which gives us only the last option.
+
+    export PYTHONUNBUFFERED=1
+
+    print('Hello World!', flush=True)
+
+
 ## Edit `/etc/sysctl.conf` for max performance:
 
 For Redis:
