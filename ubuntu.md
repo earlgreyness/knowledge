@@ -1,10 +1,3 @@
-# rsync
-
-Upload file to server, limiting bandwidth to 1000 kB/s:
-
-    rsync --bwlimit=1000 --progress -avz archive.tar.gz root@example.com:/home/
-
-
 # Shell (Bash)
 
 ## How to run command directly, but not its alias
@@ -27,6 +20,8 @@ Best tool so far is `ncdu`. Run it from any directory and see detailed usage inf
 
 # Downloading, uploading files
 
+## scp
+
 Download file from server:
 
     scp username@remote:/file/to/send /where/to/put
@@ -36,6 +31,20 @@ Upload file to server:
 
     scp /file/to/send username@remote:/where/to/put
 
+
+## rsync
+
+Archive directory `archive/`
+
+    tar -cv archive | gzip > archive.tar.gz
+
+Upload file to server, limiting bandwidth to 1000 kB/s:
+
+    rsync --bwlimit=1000 --progress -avz archive.tar.gz root@example.com:/home/
+
+Decompress archive on server to current directory:
+
+    gunzip < archive.tar.gz | tar -xv
 
 
 # GNU screen
