@@ -1,3 +1,10 @@
+# rsync
+
+Upload file to server, limiting bandwidth to 1000 kB/s:
+
+    rsync --bwlimit=1000 --progress -avz archive.tar.gz root@example.com:/home/
+
+
 # Shell (Bash)
 
 ## How to run command directly, but not its alias
