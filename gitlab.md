@@ -1,4 +1,4 @@
-# Installing self-managed Gitlab Communiti Edition
+# Installing self-managed Gitlab Community Edition
 
 ## Installing Gitlab
 
@@ -31,6 +31,12 @@ Instruction: https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https. C
 Just install `sendmail` properly:
 
     sudo apt-get install sendmail
+
+Pay close attention to installation stdout, it will probably ask you to manually configure sendmail config files.
+
+You should also update `/etc/hosts` file, making its first line look like this:
+
+    127.0.0.1   localhost gitlab.speechanalytics.ru
 
 ## Install server-side commit hooks
 
