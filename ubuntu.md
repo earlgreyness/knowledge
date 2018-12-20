@@ -57,21 +57,13 @@ Decompress archive on server to current directory:
     screen -r
     exit
 
-Switching:
-
-    ctrl + a + n
-
-New window:
-
-    ctrl + a + c
-
 Detach:
 
-    ctrl + a + d
+    Ctrl+A, Ctrl+D
 
-Exit:
+Enable mouse scroll in screen:
 
-    ctrl + a + x
+    echo 'termcapinfo xterm* ti@:te@' >> ~/.screenrc
 
 
 # Users, Groups
