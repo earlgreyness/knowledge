@@ -38,6 +38,16 @@ You should also update `/etc/hosts` file, making its first line look like this:
 
     127.0.0.1   localhost gitlab.speechanalytics.ru
 
+## Configure time zone
+
+Instruction:
+
+https://docs.gitlab.com/ee/workflow/timezone.html
+
+Add the following line to config file `/etc/gitlab/gitlab.rb`:
+
+    gitlab_rails['time_zone'] = 'Europe/Moscow'
+
 ## Install server-side commit hooks
 
 Instruction: https://docs.gitlab.com/ee/administration/custom_hooks.html
