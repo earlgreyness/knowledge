@@ -1,3 +1,8 @@
+How to restore Windows entry to GRUB after installing Ubuntu:
+
+    sudo update-grub
+
+
 # Shell (Bash)
 
 ## How to run command directly, but not its alias
