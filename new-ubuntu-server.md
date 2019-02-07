@@ -53,10 +53,6 @@ Create necessary users:
 
     sudo adduser ads
 
-Don't forget to add uWSGI users to `www-data` group:
-
-    sudo usermod -a -G ads www-data
-
 
 ## User services
 
