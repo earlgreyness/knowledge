@@ -125,6 +125,33 @@ $ cat < `which ssh-copy-id`
 
 # SSH
 
+## Forbid password ssh autorization
+
+(good security practice as it eliminates brute force possibility)
+
+Edit sshd daemon config:
+
+    /etc/ssh/sshd_config
+    # To disable tunneled clear text passwords, change to no here!
+    PasswordAuthentication no
+
+Restart sshd daemon:
+
+    sudo systemctl restart sshd.service
+
+
+
+## Prevent ssh client from disconnecting
+
+To fix constant `Broken pipe` errors, add these lines:
+
+    Host *
+    ServerAliveInterval 30
+
+to file `~/.ssh/config`. Usually the file needs to be created first. It is the ssh client config.
+
+This settings forces ssh client to ping ssh server every 30 seconds. By default there are no pings at all.
+
 ## SSH without password
 
     cd ~
