@@ -27,12 +27,12 @@ Best tool so far is `ncdu`. Run it from any directory and see detailed usage inf
 
 ## scp
 
-Download file from server:
+**Download** file from server:
 
     scp username@remote:/file/to/send /where/to/put
 
 
-Upload file to server:
+**Upload** file to server:
 
     scp /file/to/send username@remote:/where/to/put
 
