@@ -22,21 +22,11 @@ Locales:
 
 Software:
 
-    sudo apt-get install sox libsox-fmt-mp3
-    sudo apt-get install postgresql postgresql-contrib libpq-dev
-    sudo apt-get install redis-server
-    sudo apt-get install nginx
-    sudo apt-get install htop ncdu mc curl
+    sudo apt-get install -y libpq-dev htop ncdu mc curl
 
 Python:
 
-    sudo apt-get install python3-dev
-    sudo apt-get install python3-pip
-    sudo apt-get install python3-venv
-    sudo apt install python3-widgetsnbextension
-    sudo apt install python3-testresources
-    sudo python3 -m pip install --upgrade pip setuptools wheel
-    sudo python3 -m pip install uwsgi
+    sudo apt-get install -y python3-pip python3-venv
 
 
 Open ports 80 and 443 for incoming TCP connections:
