@@ -4,30 +4,37 @@
     sudo apt-get upgrade
 
 
-Change hostname:
+## Hostname
 
 https://askubuntu.com/questions/87665/how-do-i-change-the-hostname-without-a-restart
 
 
-GCC:
+## GCC
 
     sudo apt-get install build-essential
 
 
-Locales:
+## Locales
 
     sudo locale-gen en_US.UTF-8
     sudo locale-gen ru_RU.UTF-8
     sudo dpkg-reconfigure locales
+    
+## Timezone
 
-Software:
+Set correct timezone systemwide:
 
-    sudo apt-get install -y libpq-dev htop ncdu mc curl
+    $ sudo timedatectl set-timezone Europe/Moscow
+    $ timedatectl
+    
+Source: https://linuxize.com/post/how-to-set-or-change-timezone-on-ubuntu-18-04/
 
-Python:
+## Python
 
-    sudo apt-get install -y python3-pip python3-venv
+    sudo apt-get install -y libpq-dev python3-pip python3-venv
 
+
+## Open ports 80 and 443
 
 Open ports 80 and 443 for incoming TCP connections:
 
@@ -44,7 +51,7 @@ Create necessary users:
     sudo adduser ads
 
 
-## User services
+## User services (systemd)
 
 ### Enable persistent journalctl Storage
 
@@ -72,7 +79,7 @@ To enable start right after boot, regardless of user session:
 
     sudo loginctl enable-linger username
 
-### Location of unit files:
+### Location of unit files
 
     ~/.config/systemd/user/
 
@@ -92,13 +99,9 @@ if the unit file itself was changed, this is how to restart:
     systemctl --user restart myunit.service
 
 
-### Reading the journal:
+### Reading the journal
 
-    journalctl --user -u myunit.service
-
-For old Ubuntu 16.04:
-
-    journalctl --user --user-unit myunit.service
+    journalctl --user -u myunit.service -o cat -fn1000
 
 Python buffers sys.stdout by default. If stdout is connected to tty console, it flushes on `\n` symbols. Otherwise, when stdout is connected to PIPE (which is what happens when you use systemd user units), it flushes unpredictably. Use loggers or do this (StreamHandler flushes each record), or set environment variable for the whole python interpreter. 12 factor apps recommend non-buffered output, which gives us only the last option.
 
@@ -107,7 +110,7 @@ Python buffers sys.stdout by default. If stdout is connected to tty console, it 
     print('Hello World!', flush=True)
 
 
-## Edit `/etc/sysctl.conf` for max performance:
+## Edit `/etc/sysctl.conf` for max performance
 
 For Redis:
 
