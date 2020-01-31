@@ -1,3 +1,13 @@
+# Installation
+
+After installing make sure that your database uses correct default timezone:
+
+    SHOW TIMEZONE;
+    
+If incorrect, issue:
+
+    ALTER DATABASE my_database SET TIMEZONE TO 'Europe/Moscow';
+
 # Dumps and Restores
 
 Use `pg_dump`. Login as the same user as your database role. And then:
