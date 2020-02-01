@@ -1,19 +1,12 @@
 ## Acquire SSL-certificate
 
-**Important:** ports 80 and 443 must be open to external world (see [Linux.md](Linux.md)).
-
-These two commands are probably redundant:
-
-    sudo rm /etc/nginx/sites-enabled/default
-    sudo systemctl reload nginx
-
+**Important:** ports 80 and 443 must be open to external world (see [linux.md](linux.md)).
 
 Create working config in `/etc/nginx/sites-available/` only for port 80. nginx must listen to 80 and 443 ports.
 Certificates and SSL-commands are missing for now.
 
     listen 80;
     server_name courier.dostavka.me;
-
 
 Complete instructions: https://certbot.eff.org/#ubuntuxenial-nginx
 
@@ -23,55 +16,13 @@ Complete instructions: https://certbot.eff.org/#ubuntuxenial-nginx
     sudo apt-get update
     sudo apt-get install python-certbot-nginx
 
-
 Your nginx server directive must listen to both 80 and 443 ports in order for the following command to work.
 Run this command and choose interactively what domains you want to set up SSL for:
 
-
     sudo certbot --nginx
 
-
 Agree to redirection.
-
-
-Result:
-
-    Congratulations! Your certificate and chain have been saved at:
-    /etc/letsencrypt/live/courier.dostavka.me/fullchain.pem
-    Your key file has been saved at:
-    /etc/letsencrypt/live/courier.dostavka.me/privkey.pem
-    Your cert will expire on 2017-12-05. To obtain a new or tweaked
-    version of this certificate in the future, simply run certbot again
-    with the "certonly" option. To non-interactively renew *all* of
-    your certificates, run "certbot renew"
-
-
-
-## Automatic renewal
-
-Automatic renewal is already set after installation:
-
-    /lib/systemd/system/certbot.service
-    /lib/systemd/system/certbot.timer
-
-To test:
-
-    sudo certbot renew --dry-run
-
-
-## Make nginx config more secure
-
-
-    sudo mkdir -p /etc/nginx/ssl
-    sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
-
-
-## Complete nginx config example
-
-[example-ssl.nginx](example-ssl.nginx)
-
 
 ## Test your configuration
 
 https://www.ssllabs.com/ssltest/analyze.html?d=courier.dostavka.me
-
