@@ -10,7 +10,7 @@ There are two diffs:
     git diff
     git diff --cached
 
-The first is between working tree and HEAD. The second is betwee staging aread and HEAD.
+The first is between working tree and HEAD. The second is between staging and HEAD.
 
 ## Augmenting commits
 
