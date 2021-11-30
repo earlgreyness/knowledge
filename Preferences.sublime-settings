@@ -1,37 +1,19 @@
 {
-    "always_show_minimap_viewport": true,
     "bold_folder_labels": true,
-    "caret_style": "solid",
+    "color_scheme": "Mariana.sublime-color-scheme",
     "drag_text": false,
-    "draw_indent_guides": true,
-    "draw_minimap_border": true,
     "ensure_newline_at_eof_on_save": true,
-    "fallback_encoding": "Cyrillic (Windows 1251)",
-    "font_face": "Ubuntu Mono",
-    "font_size": 17,
+    "font_face": "Fira Code",
+    "font_size": 18,
     "highlight_line": true,
     "highlight_modified_tabs": true,
-    "ignored_packages":
-    [
+    "ignored_packages": [
         "Vintage"
     ],
-    "indent_guide_options":
-    [
-        "draw_normal",
-        "draw_active"
-    ],
-    "indent_to_bracket": false,
-    "line_padding_bottom": 2,
-    "line_padding_top": 2,
-    "overlay_scroll_bars": "enabled",
-    "rulers":
-    [
-        99
-    ],
-    "scroll_speed": 0,
+    "line_padding_bottom": 1,
+    "line_padding_top": 1,
     "shift_tab_unindent": true,
     "show_encoding": true,
     "show_line_endings": true,
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true
+    "theme": "auto"
 }
