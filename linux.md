@@ -28,7 +28,7 @@ Best tool so far is `ncdu`. Run it from any directory and see detailed usage inf
 
 ## rsync
 
-Archive directory `archive/`
+Compress directory `archive/`
 
     tar -cv archive | gzip > archive.tar.gz
 
@@ -57,32 +57,6 @@ Detach:
 Enable mouse scroll in screen:
 
     echo 'termcapinfo xterm* ti@:te@' >> ~/.screenrc
-
-# Users, Groups
-
-Create user:
-
-    adduser kirill
-
-Add existing user to group:
-
-    usermod -a -G groupName userName
-
-Delete user (with home directory):
-
-    userdel -r userName
-
-Delete user from group
-
-    deluser userName groupName
-
-Delete group
-
-    groupdel kirill
-
-# RAM usage
-
-    free -m
 
 # SSH
 
